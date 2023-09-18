@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de grid-area</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 10px;
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        /* Asignación de áreas a elementos */
+        .header { grid-area: header; }
+        .sidebar { grid-area: sidebar; }
+        .main { grid-area: main; }
+        .footer { grid-area: footer; }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item main">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, sit ipsa eum quia delectus tenetur libero corporis molestiae ipsum dolores quis, ut esse blanditiis quas pariatur. Saepe suscipit dolor nam.</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>

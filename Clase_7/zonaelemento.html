@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para el contenedor principal */
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #333;
+            position: relative; /* Establece el contexto de posicionamiento */
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .element {
+            width: 50px;
+            height: 50px;
+            background-color: #f39c12;
+            position: absolute; /* Permite posicionar con coordenadas */
+        }
+
+        /* Estilos para las diferentes posiciones */
+        .top {
+            top: 0; /* Parte superior del contenedor */
+            left: 50%; /* Centrado horizontalmente */
+            transform: translateX(-50%); /* Ajuste para centrar horizontalmente */
+        }
+
+        .left {
+            top: 50%; /* Centrado verticalmente */
+            left: 0; /* Parte izquierda del contenedor */
+            transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+        }
+
+        .right {
+            top: 50%; /* Centrado verticalmente */
+            right: 0; /* Parte derecha del contenedor */
+            transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+        }
+
+        .bottom {
+            bottom: 0; /* Parte inferior del contenedor */
+            left: 50%; /* Centrado horizontalmente */
+            transform: translateX(-50%); /* Ajuste para centrar horizontalmente */
+        }
+
+        .center {
+            top: 50%; /* Centrado verticalmente */
+            left: 50%; /* Centrado horizontalmente */
+            transform: translate(-50%, -50%); /* Ajuste para centrar */
+        }
+    </style>
+    <title>Zonas y Posiciones de Elementos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="element top"></div>
+        <div class="element left"></div>
+        <div class="element right"></div>
+        <div class="element bottom"></div>
+        <div class="element center"></div>
+    </div>
+</body>
+</html>

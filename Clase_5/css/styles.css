@@ -1,0 +1,48 @@
+* {
+    background-color: rgb(102, 162, 214);
+    /*cambia el color de relleno*/
+    font-family: Verdana;
+}
+body{
+    background-color: rgb(39, 130, 210,0);
+}
+
+h3 {
+    color: red;
+    background-color: aliceblue;
+}
+
+p {
+    color: brown;
+    font-size: 35px;
+}
+
+a {
+    background-color: yellow;
+}
+
+header {
+    background-color: blue;
+}
+
+main {
+    background-color: red;
+}
+
+footer {
+    background-color: yellow;
+}
+/* .nombre_de_class */
+.articulo1{
+    font-size: 25px;
+}
+.articulo2{
+    font-size: 10px;
+}
+/* #nombre_id */
+#subtitulo1{
+    color: blue;
+}
+#subtitulo2{
+    color: yellow;
+}

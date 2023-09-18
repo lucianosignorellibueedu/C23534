@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Posicionamiento en Grid Lines</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual ancho */
+            grid-template-rows: repeat(3, 100px); /* Tres filas de 100px de altura */
+            grid-gap: 10px;
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        /* Posicionamiento de elementos */
+        .item-1 {
+            grid-column-start: 2; /* Comienza en la segunda columna */
+            grid-column-end: 5; /* Termina en la quinta columna */
+            grid-row-start: 1; /* Comienza en la primera fila */
+            grid-row-end: 2; /* Termina en la segunda fila */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

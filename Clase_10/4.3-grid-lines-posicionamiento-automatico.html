@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Posicionamiento Automático en Grid Lines</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+            grid-template-rows: repeat(3, 100px); /* Tres filas de 100px de altura */
+            grid-gap: 10px;
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #f39c12;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        /* Posicionamiento automático de elementos */
+        .item:nth-child(odd) {
+            grid-column: 1 / span 2; /* Ocupa dos columnas */
+        }
+
+        .item:nth-child(2n) {
+            grid-row: 2 / span 2; /* Ocupa dos filas */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

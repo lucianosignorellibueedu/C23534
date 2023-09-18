@@ -1,0 +1,27 @@
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-size: 0.5rem;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Son unidades fijas */
+.absolutas {
+    width: 200px;
+    height: 10px;
+}
+
+/* Van dependiendo del contenedor padre y el tipo de dispositivo */
+/* .imagen {
+    width: 100%;
+    height: 100%;
+} */
+
+
+.imagen {
+    width: 300px;
+    height: 100%;
+}

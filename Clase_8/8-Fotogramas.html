@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor y los elementos */
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+
+    .elemento {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      border: 1px solid gray;
+      margin: 10px;
+    }
+
+    /* Fotogramas (Keyframes) */
+    @keyframes cambiar-color {
+      0% {
+        background-color: lightblue;
+      }
+      50% {
+        background-color: lightgreen;
+      }
+      100% {
+        background-color: lightblue;
+      }
+    }
+
+    .elemento {
+      animation-name: cambiar-color; /* Nombre del keyframe */
+      animation-duration: 3s; /* Duración de la animación */
+      animation-timing-function: ease-in-out; /* Función de temporización */
+      animation-iteration-count: infinite; /* Cantidad de repeticiones */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="elemento">Fotogramas</div>
+  </div>
+</body>
+</html>

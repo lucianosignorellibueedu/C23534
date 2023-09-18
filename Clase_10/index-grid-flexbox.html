@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedor {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header"
+                "main"
+                "article"
+                "footer";
+            min-height: 100vh;
+        }
+
+        /* Estilos para el header */
+        header {
+            grid-area: header;
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para la navegación */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        /* Estilos para el contenido principal (main) */
+        main {
+            grid-area: main;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        /* Estilos para las cards */
+        .card {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        /* Estilos para los artículos con animaciones */
+        article {
+            grid-area: article;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        section{
+            grid-area: section;
+            background-color: #458b76;
+        }
+
+        article:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos para el footer */
+        footer {
+            grid-area: footer;
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para los íconos de redes sociales */
+        .redes-sociales {
+            margin-top: 20px;
+        }
+
+        .redes-sociales a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Mi Sitio Web</h1>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Card 1</h2>
+                <p>Contenido de la Card 1...</p>
+            </div>
+            <div class="card">
+                <h2>Card 2</h2>
+                <p>Contenido de la Card 2...</p>
+            </div>
+            <div class="card">
+                <h2>Card 3</h2>
+                <p>Contenido de la Card 3...</p>
+            </div>
+            <!-- Agrega más cards según sea necesario -->
+        </main>
+        <article>
+            <h2>Artículo con Animación</h2>
+            <p>Contenido del artículo con animación...</p>
+        </article>
+        <footer>
+            <h3>Síguenos en las redes sociales</h3>
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <!-- Agrega más íconos y enlaces de redes sociales aquí -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

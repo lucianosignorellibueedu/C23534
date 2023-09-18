@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de grid-row-gap</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr); /* Tres filas de igual altura */
+            grid-row-gap: 20px; /* Espacio vertical entre filas */
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item">Elemento A</div>
+        <div class="item">Elemento B</div>
+        <div class="item">Elemento C</div>
+    </div>
+</body>
+</html>

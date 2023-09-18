@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .contenedor {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+    .elemento-1 {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      background-color: lightpink;
+      z-index: 2;
+    }
+    .elemento-2 {
+      position: absolute;
+      top: 40px;
+      left: 50px;
+      background-color: lightblue;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="elemento-1">Elemento 1</div>
+    <div class="elemento-2">Elemento 2</div>
+  </div>
+</body>
+</html>

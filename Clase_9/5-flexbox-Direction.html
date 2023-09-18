@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor principal */
+    .contenedor-flex {
+      display: flex;
+      border: 2px solid gray;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para los ítems dentro del contenedor */
+    .item-flex {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      margin: 5px;
+    }
+
+    /* Estilos para los encabezados para cada ejemplo */
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>flex-direction: row (predeterminado)</h2>
+  <div class="contenedor-flex">
+    <div class="item-flex">1</div>
+    <div class="item-flex">2</div>
+    <div class="item-flex">3</div>
+  </div>
+
+  <h2>flex-direction: row-reverse</h2>
+  <div class="contenedor-flex" style="flex-direction: row-reverse;">
+    <div class="item-flex">1</div>
+    <div class="item-flex">2</div>
+    <div class="item-flex">3</div>
+  </div>
+
+  <h2>flex-direction: column</h2>
+  <div class="contenedor-flex" style="flex-direction: column;">
+    <div class="item-flex">1</div>
+    <div class="item-flex">2</div>
+    <div class="item-flex">3</div>
+  </div>
+
+  <h2>flex-direction: column-reverse</h2>
+  <div class="contenedor-flex" style="flex-direction: column-reverse;">
+    <div class="item-flex">1</div>
+    <div class="item-flex">2</div>
+    <div class="item-flex">3</div>
+  </div>
+
+</body>
+</html>

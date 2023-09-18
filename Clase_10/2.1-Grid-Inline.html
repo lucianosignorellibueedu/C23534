@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con display: inline-grid;</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor-inline-grid {
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+            grid-gap: 20px; /* Espacio entre las celdas */
+            width: 300px; /* Ancho del contenedor */
+            margin: 0 auto; /* Centrar el contenedor en la página */
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-inline-grid">
+        <div class="item">Elemento A</div>
+        <div class="item">Elemento B</div>
+        <div class="item">Elemento C</div>
+        <div class="item">Elemento D</div>
+    </div>
+</body>
+</html>

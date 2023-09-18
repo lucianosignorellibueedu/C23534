@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor y los elementos */
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+
+    .elemento {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      border: 1px solid gray;
+      margin: 10px;
+    }
+
+    /* Transiciones */
+    .elemento {
+      transition-property: background-color, transform; /* Propiedades que se animarán */
+      transition-duration: 0.5s; /* Duración de la transición */
+      transition-timing-function: ease-in-out; /* Función de temporización */
+    }
+
+    /* Cambios al pasar el cursor */
+    .elemento:hover {
+      background-color: lightgreen;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="elemento">Transición</div>
+  </div>
+</body>
+</html>

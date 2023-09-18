@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/house-solid.svg" type="image/svg+xml">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formularios</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input placeholder="Ingrese su nombre..." required type="text" id="nombre" name="nombre" maxlength="30" size="30">
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input required type="text" id="apellido" name="apellido" maxlength="40" size="30">
+        <br>
+        <label for="edad">Edad:</label>
+        <input type="number">
+        <br>
+        <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+        <input required type="date">
+        <br>
+        <label for="pass">Pass:</label>
+        <input type="password">
+        <br>
+        <label for="email">Ingrese su correo:</label>
+        <input required type="email">
+        <br>
+        <label>Sexo:</label>
+        <input type="radio" name="sexo" value="M">Masculino
+        <input type="radio" name="sexo" value="F">Femenino
+        <br>
+        <label for="">Descripcion:</label>
+        <textarea name="" id="" cols="20" rows="5" maxlength="300"></textarea>
+        <br>
+        <label for="">Provincia:</label>
+        <select name="prov" id="prov">
+            <option value="1">Buenos Aires</option>
+            <option value="2">Santa Fe</option>
+            <option value="3">La Pampa</option>
+        </select>
+        <br>
+        <label for="color">Color:</label>
+        <input type="color" name="" id="">
+        <br>
+        <label for="subscripcion">subscripcion</label>
+        <input type="checkbox" name="" id="">
+        <br>
+
+        <button type="submit">Enviar</button>
+        <input type="reset" value="Borrar"> 
+    </form>
+</body>
+
+</html>

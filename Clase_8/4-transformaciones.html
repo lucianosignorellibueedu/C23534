@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor y las formas */
+    .contenedor {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 300px;
+    }
+
+    .forma {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      border: 1px solid gray;
+      margin: 10px;
+      transition: transform 0.3s; /* Transición suave */
+    }
+
+    /* Estilos para las transformaciones */
+    .trasladar {
+      transform: translate(50px, 0); /* Traslación en x y y */
+    }
+
+    .escalar {
+      transform: scale(1.5); /* Escalado */
+    }
+
+    .rotar {
+      transform: rotate(45deg); /* Rotación */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <!-- Forma para trasladar -->
+    <div class="forma trasladar">Traslación</div>
+    
+    <!-- Forma para escalar -->
+    <div class="forma escalar">Escalado</div>
+    
+    <!-- Forma para rotar -->
+    <div class="forma rotar">Rotación</div>
+  </div>
+</body>
+</html>

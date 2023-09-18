@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de justify-content: end;</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            justify-content: end; /* Alinea los elementos en el final del eje principal (derecha) */
+            grid-gap: 10px;
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #27ae60;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

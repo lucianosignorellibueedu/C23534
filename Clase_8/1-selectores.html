@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para los elementos */
+    /* Selector de tipo */
+    p {
+      color: blue;
+    }
+
+    /* Selector de clase */
+    .destacado {
+      font-weight: bold;
+    }
+
+    /* Selector de ID */
+    #titulo {
+      font-size: 24px;
+    }
+
+    /* Selector de atributo */
+    [type="text"] {
+      border: 1px solid gray;
+    }
+
+    /* Selector de grupo */
+    h2, h3 {
+      color: green;
+    }
+
+    /* Selector descendiente */
+    div p {
+      background-color: yellow;
+    }
+
+    /* Selector de hijo directo */
+    ul > li {
+      list-style-type: square;
+    }
+
+    /* Selector de hermano adyacente */
+    p + p {
+      margin-top: 20px;
+    }
+
+    /* Selector de general de hermanos */
+    p ~ span {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Ejemplo de Selectores Avanzados</h1>
+  
+  <p>Este es un párrafo.</p>
+  <p class="destacado">Este es otro párrafo destacado.</p>
+  
+  <div>
+    <p>Párrafo en un div.</p>
+  </div>
+  
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+  </ul>
+  
+  <p>Un párrafo separado.</p>
+  <p>Un párrafo después del separado.</p>
+  
+  <p>Texto normal.</p>
+  <span>Texto en un span.</span>
+</body>
+</html>

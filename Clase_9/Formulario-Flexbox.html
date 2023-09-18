@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor principal del formulario */
+    .formulario-container {
+      display: flex;
+      flex-direction: column; /* Apila elementos verticalmente */
+      width: 300px;
+      margin: 0 auto; /* Centra el formulario horizontalmente en la página */
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Estilos para los campos de entrada y etiquetas */
+    .formulario-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    .formulario-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .formulario-input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    /* Estilos para el botón de envío */
+    .formulario-boton {
+      align-self: flex-start; /* Alinea el botón a la izquierda */
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="formulario-container">
+    <div class="formulario-item">
+      <label for="nombre" class="formulario-label">Nombre:</label>
+      <input type="text" id="nombre" class="formulario-input">
+    </div>
+
+    <div class="formulario-item">
+      <label for="email" class="formulario-label">Correo Electrónico:</label>
+      <input type="email" id="email" class="formulario-input">
+    </div>
+
+    <div class="formulario-item">
+      <label for="mensaje" class="formulario-label">Mensaje:</label>
+      <textarea id="mensaje" class="formulario-input" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="formulario-boton">Enviar</button>
+  </div>
+</body>
+</html>

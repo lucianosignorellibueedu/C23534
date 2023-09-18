@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos generales para dispositivos grandes (por defecto) */
+    body {
+      font-size: 16px;
+    }
+     /* Estilos comunes para todos los tamaños de pantalla */
+     .container {
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    /* Estilos para dispositivos medianos (punto de corte en 768px) */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: yellowgreen;
+      }
+    }
+    @media only screen and (
+        width: 600px)  {
+            .container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: black;
+      }
+        }
+    /* Estilos para dispositivos pequeños (punto de corte en 480px) */
+    @media (max-width: 480px) {
+      body {
+        font-size: 12px;
+      }
+      .container {
+        width: 90%;
+        background-color: yellowgreen;
+      }
+    }
+
+    /* Estilos para dispositivos muy pequeños (punto de corte en 320px) */
+    @media (max-width: 320px) {
+      body {
+        font-size: 10px;
+      }
+    }
+
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ejemplo de Puntos de Corte</h1>
+    <p>Los puntos de corte permiten ajustar el diseño en diferentes tamaños de pantalla.</p>
+  </div>
+</body>
+</html>

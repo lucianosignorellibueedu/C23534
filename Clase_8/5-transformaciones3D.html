@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor y las formas */
+    .contenedor {
+      perspective: 1000px; /* Profundidad de perspectiva */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 300px;
+    }
+
+    .forma3d {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      border: 1px solid gray;
+      margin: 10px;
+      transform-style: preserve-3d; /* Preservar transformaciones 3D */
+      transition: transform 0.3s; /* Transición suave */
+    }
+
+    /* Estilos para las funciones 3D */
+    .girar-y {
+      transform: rotateY(45deg); /* Giro en el eje Y */
+    }
+
+    .girar-x {
+      transform: rotateX(45deg); /* Giro en el eje X */
+    }
+
+    .girar-xy {
+      transform: rotateX(45deg) rotateY(45deg); /* Giros en X e Y */
+    }
+
+    .trasladar-3d {
+      transform: translateZ(50px); /* Traslación en el eje Z */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <!-- Formas con funciones 3D -->
+    <div class="forma3d girar-y">Giro en Y</div>
+    <div class="forma3d girar-x">Giro en X</div>
+    <div class="forma3d girar-xy">Giros en X e Y</div>
+    <div class="forma3d trasladar-3d">Traslación en Z</div>
+  </div>
+</body>
+</html>

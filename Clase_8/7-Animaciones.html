@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para el contenedor y los elementos */
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+
+    .elemento {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      border: 1px solid gray;
+      margin: 10px;
+    }
+
+    /* Animaciones */
+    @keyframes girar {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .elemento {
+      animation-name: girar; /* Nombre de la animación */
+      animation-duration: 3s; /* Duración de la animación */
+      animation-timing-function: ease-in-out; /* Función de temporización */
+      animation-delay: 1s; /* Retraso antes de iniciar */
+      animation-iteration-count: infinite; /* Cantidad de repeticiones */
+      animation-direction: alternate; /* Dirección de la animación */
+      animation-fill-mode: both; /* Estado al finalizar */
+      animation-play-state: running; /* Estado de la animación */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="elemento">Animación</div>
+  </div>
+</body>
+</html>

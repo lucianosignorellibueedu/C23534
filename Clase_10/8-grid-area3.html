@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de grid-area</title>
+    <style>
+        /* Estilos para el contenedor */
+        .contenedor {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "main main"
+                "footer footer";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 10px;
+        }
+
+        /* Estilos para los elementos dentro del contenedor */
+        .item {
+            background-color: #27ae60;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        /* Asignación de áreas a elementos */
+        .header { grid-area: header; }
+        .main { grid-area: main; }
+        .footer { grid-area: footer; }
+
+        /* Estilos adicionales */
+        .superpuesto {
+            grid-area: main;
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item header">Header</div>
+        <div class="item main superpuesto">Main Content (superpuesto)</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>
