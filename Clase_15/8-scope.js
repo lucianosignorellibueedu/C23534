@@ -9,14 +9,14 @@ console.log(variableLocal); // Generará un error, la variable no está definida
 
 
 
-// let variableGlobal = "Soy global";
+let variableGlobal = "Soy global";
 
-// function ejemploScopeGlobal() {
-//     console.log(variableGlobal); // Se puede acceder dentro de la función
-// }
+function ejemploScopeGlobal() {
+    console.log(variableGlobal); // Se puede acceder dentro de la función
+}
 
-// ejemploScopeGlobal();
-// console.log(variableGlobal); // Se puede acceder fuera de la función
+ejemploScopeGlobal();
+console.log(variableGlobal); // Se puede acceder fuera de la función
 
 
 

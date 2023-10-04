@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User API</title>
+</head>
+
+<body>
+    <h1>Random User Information</h1>
+    <button id="getRandomUser">Obtener Usuario Aleatorio</button>
+    <div id="userInfo">
+        <!-- Aquí se buttonmostrará la información del usuario -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const getRandomUserButton = document.getElementById("getRandomUser");
+            const userInfoDiv = document.getElementById("userInfo");
+
+            getRandomUserButton.addEventListener("click", () => {
+                // Hacer una solicitud a la API Randomuser
+                fetch("https://randomuser.me/api/")
+                    .then(response => response.json())
+                    .then(data => {
+                        // Extraer la información del usuario de la respuesta JSON
+                        const user = data.results[0];
+
+                        // Crear una plantilla HTML con la información del usuario
+                        const userHTML = `
+                    <img src="${user.picture.large}" alt="Foto de usuario">
+                    <p><strong>Nombre:</strong> ${user.name.first} ${user.name.last}</p>
+                    <p><strong>Correo electrónico:</strong> ${user.email}</p>
+                    <p><strong>Género:</strong> ${user.gender}</p>
+                    <p><strong>Fecha de nacimiento:</strong> ${user.dob.date}</p>
+                    <p><strong>Teléfono:</strong> ${user.phone}</p>
+                    <p><strong>Ciudad:</strong> ${user.location.city}</p>
+                `;
+
+                        // Mostrar la información del usuario en userInfoDiv
+                        userInfoDiv.innerHTML = userHTML;
+                    })
+                    .catch(error => {
+                        console.error("Error al obtener datos del usuario:", error);
+                        userInfoDiv.innerHTML = "Ocurrió un error al obtener datos del usuario.";
+                    });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
