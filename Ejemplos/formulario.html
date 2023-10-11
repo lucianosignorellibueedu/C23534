@@ -1,0 +1,53 @@
+<!-- modify this form HTML and place wherever you want your form -->
+<!--Se van a tener que registrar aca y que les de una url https://formspree.io/ -->
+<form id="my-form" action="https://formspree.io/f/xxxxxxxxx" method="POST">
+  <label>Email:</label>
+  <input type="email" name="email" required />
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="apellido">Apellido:</label>
+  <input type="text" id="apellido" name="apellido" required>
+
+  <label for="celular">Número de celular:</label>
+  <input type="tel" id="celular" name="celular" >
+
+  <label>Message:</label>
+  <input type="text" name="message" />
+  
+  <label for="domicilio">Domicilio:</label>
+  <input type="text" id="domicilio" name="domicilio" required>
+
+  <button id="my-form-button">Submit</button>
+  <p id="my-form-status"></p>
+</form>
+<!-- Place this script at the end of the body tag -->
+<script>
+    var form = document.getElementById("my-form");
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          alert("Gracias por completar el formulario");
+        } else {
+          response.json().then(data => {
+              status.innerHTML = "Hubo un problema al enviar su formulario"
+            }
+          )
+        }
+      }).catch(error => {
+        status.innerHTML = "Hubo un problema al enviar su formulario"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
