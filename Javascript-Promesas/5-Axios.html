@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Axios con JSONPlaceholder</title>
+</head>
+<body>
+    <h1>Listado de Publicaciones</h1>
+    <ul id="post-list"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const postList = document.getElementById('post-list');
+
+        // Utilizar Axios para realizar la solicitud a la API JSONPlaceholder.
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(response => {
+                // Verificar si la respuesta es exitosa.
+                if (response.status === 200) {
+                    const posts = response.data;
+
+                    // Recorrer las publicaciones y mostrarlas en la página.
+                    posts.forEach(post => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = post.title;
+                        postList.appendChild(listItem);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Hubo un error al obtener las publicaciones:', error);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+// Sintaxis
+fetch(url, options)
+  .then(response => {
+    // Manejo de la respuesta
+  })
+  .catch(error => {
+    // Manejo de errores
+  });
+
+
+  Ejemplo 
+  fetch('https://api.example.com/data')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error en la solicitud');
+    }
+    return response.json(); // Analizar la respuesta como JSON
+  })
+  .then(data => {
+    console.log(data); // Hacer algo con los datos
+  })
+  .catch(error => {
+    console.error(error);
+  });
