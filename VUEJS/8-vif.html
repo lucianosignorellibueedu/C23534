@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de v-if, v-elseif y v-else con Vue.js 3</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Ejemplo de v-if, v-elseif y v-else con Vue.js</h1>
+
+    <div>
+      <button @click="seleccionarEstado('mostrar')">Mostrar</button>
+      <button @click="seleccionarEstado('editar')">Editar</button>
+      <button @click="seleccionarEstado('eliminar')">Eliminar</button>
+    </div>
+
+    <div v-if="estado === 'mostrar'">
+      <p>Este es un mensaje de muestra.</p>
+    </div>
+
+    <div v-else-if="estado === 'editar'">
+      <input v-model="textoEditado">
+      <button @click="guardarCambios">Guardar</button>
+    </div>
+
+    <div v-else>
+      <p>¿Seguro que deseas eliminar este mensaje?</p>
+      <button @click="eliminarMensaje">Eliminar</button>
+    </div>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          estado: 'no',
+          textoEditado: 'Texto editado'
+        };
+      },
+      methods: {
+        seleccionarEstado(nuevoEstado) {
+          this.estado = nuevoEstado;
+        },
+        guardarCambios() {
+          // Lógica para guardar los cambios
+          this.estado = 'mostrar';
+        },
+        eliminarMensaje() {
+          // Lógica para eliminar el mensaje
+          this.estado = 'mostrar';
+        }
+      }
+    });
+
+    app.mount("#app");
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>Lista de Tareas</h2>
+        <ul>
+            <li v-for="tarea in tareas" :key="tarea.id">
+                {{ tarea.nombre }}
+                <button @click="eliminarTarea(tarea.id)">Eliminar</button>
+            </li>
+        </ul>
+
+        <input v-model="nuevaTarea" type="text">
+        <button @click="agregarTarea">Agregar Tarea</button>
+    </div>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                tareas: [
+                    { id: 1, nombre: 'Hacer la compra' },
+                    { id: 2, nombre: 'Hacer ejercicio' },
+                    { id: 3, nombre: 'Leer un libro' }
+                ],
+                nuevaTarea: ''
+            },
+            methods: {
+                agregarTarea() {
+                    if (this.nuevaTarea !== '') {
+                        const nuevaTarea = {
+                            id: this.tareas.length + 1,
+                            nombre: this.nuevaTarea
+                        };
+                        this.tareas.push(nuevaTarea);
+                        this.nuevaTarea = '';
+                    }
+                },
+                eliminarTarea(id) {
+                    this.tareas = this.tareas.filter(tarea => tarea.id !== id);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

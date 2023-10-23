@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Incluiar libreria vuejs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.global.prod.js"></script>
+    <title>VUE JS</title>
+</head>
+<body>
+    <!-- Crear una instancia de vue -->
+    <div id="app">
+        {{ mensaje }}
+    </div>
+
+    <script>
+        // configurar la instancia de vue
+        const app = Vue.createApp({
+            data(){
+                return {
+                    mensaje: "Hola mundo"
+            };
+            } 
+        });
+        
+        app.mount('#app');
+    </script>
+</body>
+</html>

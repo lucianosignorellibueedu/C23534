@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Propiedad Computada con Vue.js 3</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Ejemplo de Propiedad Computada con Vue.js</h1>
+
+    <input type="number" v-model="cantidad">
+    <p>La mitad de la cantidad es: {{ mitad }}</p>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          cantidad: 0
+        };
+      },
+      computed: {
+        mitad() {
+          return this.cantidad / 2;
+        }
+      }
+    });
+
+    app.mount("#app");
+  </script>
+</body>
+</html>

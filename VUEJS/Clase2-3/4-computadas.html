@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Productos</h2>
+        <ul>
+          <li v-for="producto in productos" :key="producto.id">
+            {{ producto.nombre }} - Precio: {{ producto.precio }} €
+            <button @click="agregarAlCarrito(producto)">Agregar al Carrito</button>
+          </li>
+        </ul>
+    
+        <h3>Total: {{ total }} €</h3>
+    
+        <h2>Carrito de Compras</h2>
+        <ul>
+          <li v-for="producto in carrito" :key="producto.id">
+            {{ producto.nombre }} - Precio: {{ producto.precio }} €
+            <button @click="eliminarDelCarrito(producto)">Eliminar del Carrito</button>
+          </li>
+        </ul>
+      </div>
+
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            productos: [
+              { id: 1, nombre: 'Camiseta', precio: 20 },
+              { id: 2, nombre: 'Pantalón', precio: 40 },
+              { id: 3, nombre: 'Zapatos', precio: 60 }
+            ],
+            carrito: []
+          },
+          computed: {
+            total() {
+              return this.carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+            }
+          },
+          methods: {
+            agregarAlCarrito(producto) {
+              this.carrito.push(producto);
+            },
+            eliminarDelCarrito(producto) {
+              const indice = this.carrito.findIndex(item => item.id === producto.id);
+              if (indice !== -1) {
+                this.carrito.splice(indice, 1);
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html>

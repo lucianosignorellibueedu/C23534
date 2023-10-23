@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Aplicación de Tareas</h1>
+        <task-list></task-list>
+      </div>
+    
+      <script>
+        // Componente TaskList
+        Vue.component('task-list', {
+          template: `
+            <div>
+              <h2>Lista de Tareas</h2>
+              <ul>
+                <task-item v-for="task in tasks" :key="task.id" :task="task"></task-item>
+              </ul>
+            </div>
+          `,
+          data() {
+            return {
+              tasks: [
+                { id: 1, title: 'Tarea 1' },
+                { id: 2, title: 'Tarea 2' },
+                { id: 3, title: 'Tarea 3' }
+              ]
+            };
+          }
+        });
+    
+        // Componente TaskItem
+        Vue.component('task-item', {
+          props: ['task'],
+          template: `
+            <li>{{ task.title }}</li>
+          `
+        });
+    
+        new Vue({
+          el: '#app'
+        });
+      </script>
+</body>
+</html>

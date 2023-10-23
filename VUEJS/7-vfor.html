@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de v-for con Vue.js 3</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Ejemplo de v-for con Vue.js</h1>
+
+    <ul>
+      <li v-for="(item, index) in listaItems" :key="index">
+        {{ item }}
+        <button @click="eliminarItem(index)">Eliminar</button>
+      </li>
+    </ul>
+
+    <input v-model="nuevoItem" @keyup.enter="agregarItem" placeholder="Agregar un nuevo item">
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          listaItems: ["Manzana", "Banana", "Naranja"],
+          nuevoItem: ""
+        };
+      },
+      methods: {
+        agregarItem() {
+          if (this.nuevoItem) {
+            this.listaItems.push(this.nuevoItem);
+            this.nuevoItem = "";
+          }
+        },
+        eliminarItem(index) {
+          this.listaItems.splice(index, 1);
+        }
+      }
+    });
+
+    app.mount("#app");
+  </script>
+</body>
+</html>

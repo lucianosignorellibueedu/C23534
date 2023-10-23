@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <!-- <li v-for="numero in numeros">{{numero}}</li> -->
+       <li v-for="(usuario, index) in usuarios" :key="index">
+                {{usuario.nombre}} {{usuario.edad}}
+        </li>
+    </div>
+
+       <script>
+        let app = new Vue({
+            el: '#app',
+            data:{
+                usuarios:[
+                    {nombre:'Pedro', edad: 25},
+                    {nombre:'Maria', edad: 28},
+                    {nombre:'Luis', edad: 35},
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

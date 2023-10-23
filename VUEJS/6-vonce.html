@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de v-once con Vue.js 3</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Ejemplo de v-once con Vue.js</h1>
+
+    <p v-once>{{ mensajeUnaVez }}</p>
+
+    <button @click="cambiarMensaje">Cambiar Mensaje</button>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          mensajeUnaVez: 'Este mensaje nunca cambiará'
+        };
+      },
+      methods: {
+        cambiarMensaje() {
+          this.mensajeUnaVez = 'Mensaje actualizado';
+        }
+      }
+    });
+
+    app.mount("#app");
+  </script>
+</body>
+</html>

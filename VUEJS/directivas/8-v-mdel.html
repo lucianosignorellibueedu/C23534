@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <template>
+            <div id="app">
+                <p>{{ mensaje }}</p>
+                <p><input v-model="mensaje"></p>
+            </div>
+        </template>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    mensaje: 'Hola Codo a Codo!'
+                }
+            }
+    })
+    </script>
+
+</body>
+
+</html>

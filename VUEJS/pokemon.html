@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo con Axios y Async/Await</title>
+</head>
+<body>
+    <h1>Detalles de Pokémon</h1>
+    <div id="pokemon-details"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const pokemonDetails = document.getElementById('pokemon-details');
+
+        async function getPokemonDetails() {
+            try {
+                const response = await axios.get('https://pokeapi.co/api/v2/pokemon/12');
+                const data = response.data;
+
+                const name = data.name;
+                const id = data.id;
+
+                pokemonDetails.innerHTML = `<p>Nombre: ${name}</p><p>ID: ${id}</p>`;
+            } catch (error) {
+                console.error('Hubo un error al obtener los detalles del Pokémon:', error);
+            }
+        }
+
+        getPokemonDetails();
+    </script>
+</body>
+</html>

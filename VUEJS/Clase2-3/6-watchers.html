@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Calculadora</h2>
+        <input type="number" v-model="numero1">
+        <input type="number" v-model="numero2">
+    
+        <p>Resultado: {{ resultado }}</p>
+      </div>
+    
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            numero1: 0,
+            numero2: 0,
+            resultado: 0
+          },
+          watch: {
+            numero1: function(nuevoValor) {
+              this.calcularResultado();
+            },
+            numero2: function(nuevoValor) {
+              this.calcularResultado();
+            }
+          },
+          methods: {
+            calcularResultado() {
+              this.resultado = this.numero1 + this.numero2;
+            }
+          }
+        });
+      </script>
+</body>
+</html>

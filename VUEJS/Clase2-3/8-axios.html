@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consumir API con Axios en Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>Lista de Usuarios</h2>
+    <ul>
+      <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+    </ul>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        users: []
+      },
+      mounted() {
+        this.fetchUsers();
+      },
+      methods: {
+        fetchUsers() {
+          axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(response => {
+              this.users = response.data;
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+Axios para realizar una solicitud GET a la API JSONPlaceholder, que proporciona datos de usuarios. Cuando se monta el componente Vue (en el ciclo de vida mounted), llamamos al método fetchUsers.
+
+Dentro de fetchUsers, usamos Axios para hacer la solicitud GET a la URL. En el método .then, asignamos los datos de respuesta a la propiedad users del componente. En caso de error, capturamos la excepción y la mostramos en la consola.
+
+En la HTML, utilizamos v-for para iterar sobre la matriz users y mostrar los nombres de los usuarios en una lista.
