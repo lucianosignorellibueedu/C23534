@@ -1,0 +1,18 @@
+agrupamientos_agregacion_having.sql (usar con base de datos casa_electro del archivo casa_electrodomesticos.sql): Uso de Group by y funciones agregadas: Count (2 ejemplos), Sum (2 ejemplos), promedio, máximo y mínimo. Having y Where: explicación y 2 ejemplos
+
+bbdd1.sql: Comentarios, tipos; Crear BD; Consultas DDL con tablas: crear, mostrar (show), ver detalles (describe), eliminar, modificar campos (agregar, cambiar nombre y tipo de dato, eliminar).
+
+bbdd2.sql: Consultas DML: Mostrar todos los registros, agregar de a uno, agregar de a varios, eliminar, actualizar
+
+casa_electrodomesticos.sql: Base de datos de una casa de electrodomésticos. Ver estructura en casa_electro_tablasyrelaciones.jpg. Se crean las 7 tablas con datos.
+
+empresa.sql: Base de datos de una empresa. Posee una sola tabla con datos de 200 empleados (información generada aleatoriamente, no real).
+
+empresa_consultas.sql (usar con base de datos empresa del archivo empresa.sql): Consultas de selección varias. Uso de Order by, limit, where con operadores de comparación, between, like, not like, in, distinct.
+NOTA: para NULL / IS NOT NULL se puede borrar la provincia de algún empleado o agregar empleados sin provincia.
+
+funciones_escalares_subconsultas.sql (usar con base de datos casa_electro del archivo casa_electrodomesticos.sql): Posee un ejemplo de uso de funciones escalares varias y dos ejemplos de subconsultas.
+
+joins_casa_electro.sql (usar con base de datos casa_electro del archivo casa_electrodomesticos.sql): Muestra 4 casos de uso de INNER JOIN donde se involucran 2 o mas tablas.
+
+joins_casa_electro2.sql	(usar con base de datos casa_electro del archivo casa_electrodomesticos.sql): Ejemplos de uso e LEFT JOIN y RIGHT JOIN.
