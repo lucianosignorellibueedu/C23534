@@ -25,40 +25,38 @@ while i < n:
     i += 1
 
 
-Ejemplo 1: Recorriendo una lista:
+# Ejemplo 1: Recorriendo una lista:
 
  
  
 frutas = ["manzana", "banana", "cereza"]
 for fruta in frutas:
     print(fruta)
-Este bucle for recorre la lista de frutas e imprime cada una de ellas.
+# Este bucle for recorre la lista de frutas e imprime cada una de ellas.
 
-Ejemplo 2: Recorriendo un rango:
-
- 
+# Ejemplo 2: Recorriendo un rango: 
  
 for i in range(5):
     print(i)
-Este bucle for itera sobre un rango de números del 0 al 4 e imprime cada número.
+# Este bucle for itera sobre un rango de números del 0 al 4 e imprime cada número.
 
-Ejemplo 3: Recorriendo una cadena de texto:
+# Ejemplo 3: Recorriendo una cadena de texto:
 
  
  
 mensaje = "Hola, Python"
 for letra in mensaje:
     print(letra)
-Este bucle for recorre cada carácter en la cadena de texto "mensaje" e imprime cada carácter.
+# Este bucle for recorre cada carácter en la cadena de texto "mensaje" e imprime cada carácter.
 
-Ejemplo 4: Bucle for anidado:
+# Ejemplo 4: Bucle for anidado:
 
  
  
 for i in range(3):
     for j in range(3):
         print(f"({i}, {j})")
-Este ejemplo muestra cómo se pueden utilizar bucles for anidados para iterar a través de combinaciones de valores.
+# Este ejemplo muestra cómo se pueden utilizar bucles for anidados para iterar a través de combinaciones de valores.
 
 # Ejemplo 5: Usando enumerate para obtener índices y valores:
 

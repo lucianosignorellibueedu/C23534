@@ -31,7 +31,7 @@ division = 15 / 3
  
 saludo = "Hola, " + "mundo"
 longitud = len(saludo)  # Devuelve la longitud de la cadena
-Expresiones lógicas:
+# Expresiones lógicas:
  
 es_mayor_de_edad = edad >= 18
 tiene_descuento = precio < 20.0

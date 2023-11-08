@@ -2,6 +2,7 @@
 # Python ignora todo después del símbolo "#" en una línea.
 
 def suma(a, b):
+
     """
     Esta es una función que toma dos números como argumentos y devuelve su suma.
     :param a: El primer número.
@@ -10,6 +11,9 @@ def suma(a, b):
     """
     resultado = a + b
     return resultado
+
+   
+
 
 # Comentario en bloque: Estos comentarios se utilizan para explicar secciones de código.
 # Puedes escribirlos entre tres comillas dobles (""" ... """) o entre tres comillas simples (''' ... ''').
