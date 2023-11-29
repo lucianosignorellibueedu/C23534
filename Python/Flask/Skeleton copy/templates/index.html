@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <button onclick="getTasks()">Obtener Tareas</button>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.content }}
+                <button onclick="deleteTask({{ task.id }})">Eliminar</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_task') }}">Agregar Tarea</a>
+
+    <script>
+        function getTasks() {
+            fetch('/get_tasks')
+                .then(response => response.json())
+                .then(data => {
+                    alert(JSON.stringify(data));
+                });
+        }
+
+        function deleteTask(id) {
+            fetch(`/delete_task/${id}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    getTasks();
+                });
+        }
+    </script>
+</body>
+</html>
